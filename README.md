@@ -39,13 +39,13 @@
 - 🗓️ **notion_cal** — 여러 Notion DB의 오늘 일정을 한 화면에 모아 보는 안드로이드 앱 (Kotlin/Compose). [🔗](https://github.com/parkhaas/dock/releases/tag/notion_cal)
 - 🎟️ **codeManager** — 바코드/QR을 열지 않고 읽고, 쿠폰을 보관·관리하는 Android 앱. [🔗](https://github.com/parkhaas/dock/releases/tag/codeManager)
 - 📷 **photo-frame** — 안드로이드 태블릿용 전자 액자 앱 (Kotlin/Compose). [🔗](https://github.com/parkhaas/dock/releases/tag/photo-frame)
+- 🖼️ **photo_frame** *(전자액자 이전 버전, Flutter 프로젝트)*
 - 🧩 **mini_widgets** — 노션에 임베드해 쓰는 정적 미니 위젯 모음 (HTML/JS, 빌드 없음, Vercel 배포). [🔗](https://widget-eta-mocha.vercel.app/)
+- 🌐 **parkhaas.github.io** — 박하스 프로필 페이지.
+- 🪪 **ocr-namecard** — 명함 OCR 앱
 - 🤖 **telegram-bridge** — 출퇴근 자동 브리핑과 Claude 대화를 중계하는 Telegram Bot.
-- 🌐 **parkhaas.github.io** — 박재덕 개인 소개 페이지.
 - 🗃️ **wiki-archive** — 웹 문서를 마크다운으로 연쇄 보관·갱신하고 링크가 살아 있는 HTML 사이트로 만드는 도구
 - 🎵 **id3tag** — MP3 ID3 태그 일괄 편집 CLI
-- 🪪 **ocr-namecard** — 명함 OCR 앱
-- 🖼️ **photo_frame** *(전자액자 이전 버전, Flutter 프로젝트)*
 - 📚 **ParkhaasLib** — Android/Java 앱 구현간 공통코드 분리한 Library (본인 사용)
 
 **업무 관련 파일럿**
