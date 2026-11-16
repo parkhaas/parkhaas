@@ -29,19 +29,22 @@
 ## 🔭 지금 하고 있는 것
 
 **공개**
-- 🎬 **[fp-pilot](https://github.com/parkhaas/fp-pilot)** — Fromis9 팬 영상 아카이브 (FLOVER-FLIX). YouTube 영상 목록 자동 수집.
+- 🎬 **fp-pilot** — Fromis9 팬 영상 아카이브 (FLOVER-FLIX). YouTube 영상 목록 자동 수집. [🔗](https://parkhaas.github.io/fp-pilot/)
+- 🚢 **dock** — 내 안드로이드 앱의 최신 APK를 올려 두는 공개 배포 저장소. [🔗](https://github.com/parkhaas/dock)
 
 **비공개**
+- 💰 **BudgetBook** — 태풍이 용돈 기입장. 자녀 앱은 기록·용돈 요청, 부모 앱은 용돈(정기 포함) 송금. [🔗](https://github.com/parkhaas/dock/releases/tag/BudgetBook)
+- 🔔 **RecordNoti** — 기기의 알림·상태를 기록하는 모니터 앱과 관리자 앱. [🔗](https://github.com/parkhaas/dock/releases/tag/RecordNoti)
+- 👨‍👩‍👧 **familyguard** — 자녀 기기 앱 사용 모니터링 앱. [🔗](https://github.com/parkhaas/dock/releases/tag/familyguard)
+- 🗓️ **notion_cal** — 여러 Notion DB의 오늘 일정을 한 화면에 모아 보는 안드로이드 앱 (Kotlin/Compose). [🔗](https://github.com/parkhaas/dock/releases/tag/notion_cal)
+- 🎟️ **codeManager** — 바코드/QR을 열지 않고 읽고, 쿠폰을 보관·관리하는 Android 앱. [🔗](https://github.com/parkhaas/dock/releases/tag/codeManager)
+- 📷 **photo-frame** — 안드로이드 태블릿용 전자 액자 앱 (Kotlin/Compose). [🔗](https://github.com/parkhaas/dock/releases/tag/photo-frame)
+- 🧩 **mini_widgets** — 노션에 임베드해 쓰는 정적 미니 위젯 모음 (HTML/JS, 빌드 없음, Vercel 배포). [🔗](https://widget-eta-mocha.vercel.app/)
 - 🤖 **telegram-bridge** — 출퇴근 자동 브리핑과 Claude 대화를 중계하는 Telegram Bot.
-- 👨‍👩‍👧 **familyguard** — 자녀기기 앱 사용 모니터링 앱.
-- 🗓️ **notion_cal** — 여러 Notion DB의 오늘 일정을 한 화면에 모아 보는 안드로이드 앱 (Kotlin/Compose)
-- 🧩 **[mini_widgets](https://widget-eta-mocha.vercel.app/)** — 노션에 임베드해 쓰는 정적 미니 위젯 모음 (HTML/JS, 빌드 없음, Vercel 배포)
-- 📷 **photo-frame** — 안드로이드 태블릿용 전자 액자 앱 (Kotlin/Compose)
+- 🌐 **parkhaas.github.io** — 박재덕 개인 소개 페이지.
 - 🗃️ **wiki-archive** — 웹 문서를 마크다운으로 연쇄 보관·갱신하고 링크가 살아 있는 HTML 사이트로 만드는 도구
 - 🎵 **id3tag** — MP3 ID3 태그 일괄 편집 CLI
 - 🪪 **ocr-namecard** — 명함 OCR 앱
-- 🔔 **RecordNoti** — 노티 알림 기록하는 앱
-- 💰 **BudgetBook** — 태풍이 용돈 기입장 구현 프로젝트
 - 🖼️ **photo_frame** *(전자액자 이전 버전, Flutter 프로젝트)*
 - 📚 **ParkhaasLib** — Android/Java 앱 구현간 공통코드 분리한 Library (본인 사용)
 
@@ -49,6 +52,48 @@
 - 📐 **artemis** — 다양한 스크린 사이즈(폰, 태블릿, PC 등)에 자동 대응하는 레이아웃 구성 파일럿 (Flutter)
 - 🎞️ **FrameSeeker** — 영상처리를 위한 Frame 단위 전처리기 파일럿
 - 🧪 **CrayOnDemo** — CrazyOn 프로젝트 파일럿
+
+<br/><br/>
+
+## 📱 앱 주요 화면
+
+APK는 공개 배포 저장소 [dock](https://github.com/parkhaas/dock)의 릴리스에서 받을 수 있습니다. (디자인 샘플)
+
+### 용돈기입장 — 자녀 앱 · 부모(관리자) 앱
+
+<img src="https://raw.githubusercontent.com/parkhaas/dock/main/docs/BudgetBook.png" alt="BudgetBook 화면" width="100%">
+
+🔗 [`BudgetBook` 릴리스](https://github.com/parkhaas/dock/releases/tag/BudgetBook) · [`BudgetBookClient` 릴리스](https://github.com/parkhaas/dock/releases/tag/BudgetBookClient)
+
+### 알림 모니터 + 알림 관리자
+
+<img src="https://raw.githubusercontent.com/parkhaas/dock/main/docs/RecordNoti.png" alt="RecordNoti 화면" width="100%">
+
+🔗 [`RecordNoti` 릴리스](https://github.com/parkhaas/dock/releases/tag/RecordNoti)
+
+### FamilyGuard — 투명한 자녀 기기 사용 모니터링
+
+<img src="https://raw.githubusercontent.com/parkhaas/dock/main/docs/familyguard.png" alt="familyguard 화면" width="100%">
+
+🔗 [`familyguard` 릴리스](https://github.com/parkhaas/dock/releases/tag/familyguard)
+
+### Notion Today — 오늘 일정 모아 보기
+
+<img src="https://raw.githubusercontent.com/parkhaas/dock/main/docs/notion_cal.png" alt="notion_cal 화면" width="100%">
+
+🔗 [`notion_cal` 릴리스](https://github.com/parkhaas/dock/releases/tag/notion_cal)
+
+### codeManager — 열지 않는 코드 리더 + 쿠폰 보관함
+
+<img src="https://raw.githubusercontent.com/parkhaas/dock/main/docs/codeManager.png" alt="codeManager 화면" width="100%">
+
+🔗 [`codeManager` 릴리스](https://github.com/parkhaas/dock/releases/tag/codeManager)
+
+### 전자액자 (PhotoFrame) — 위젯 보드
+
+<img src="https://raw.githubusercontent.com/parkhaas/dock/main/docs/photo-frame.png" alt="photo-frame 화면" width="100%">
+
+🔗 [`photo-frame` 릴리스](https://github.com/parkhaas/dock/releases/tag/photo-frame)
 
 <br/><br/>
 
