@@ -111,12 +111,7 @@
       <sub>전자액자 이전 버전 (Flutter 프로젝트).</sub><br/>
       <sub>🔒 저장소 비공개</sub>
     </td>
-    <td width="33%" valign="top">
-      <img src="assets/previews/artemis.png" width="100%" alt="artemis 미리보기" /><br/>
-      <b>📐 artemis</b><br/>
-      <sub>다양한 스크린 사이즈(폰, 태블릿, PC 등)에 자동 대응하는 레이아웃 구성 파일럿 (Flutter).</sub><br/>
-      <sub>🔒 저장소 비공개 · 업무 파일럿</sub>
-    </td>
+    <td width="33%"></td>
     <td width="33%"></td>
   </tr>
 </table>
@@ -157,22 +152,32 @@
       <sub>Android/Java 앱 구현간 공통코드 분리한 Library (본인 사용).</sub><br/>
       <sub>🔒 저장소 비공개</sub>
     </td>
+    <td width="33%"></td>
+  </tr>
+</table>
+
+### 💼 업무 관련 파일럿
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <img src="assets/previews/artemis.png" width="100%" alt="artemis 미리보기" /><br/>
+      <b>📐 artemis</b><br/>
+      <sub>다양한 스크린 사이즈(폰, 태블릿, PC 등)에 자동 대응하는 레이아웃 구성 파일럿 (Flutter).</sub><br/>
+      <sub>🔒 저장소 비공개</sub>
+    </td>
     <td width="33%" valign="top">
       <img src="assets/previews/FrameSeeker.png" width="100%" alt="FrameSeeker 미리보기" /><br/>
       <b>🎞️ FrameSeeker</b><br/>
       <sub>영상처리를 위한 Frame 단위 전처리기 파일럿.</sub><br/>
-      <sub>🔒 저장소 비공개 · 업무 파일럿</sub>
+      <sub>🔒 저장소 비공개</sub>
     </td>
-  </tr>
-  <tr>
     <td width="33%" valign="top">
       <img src="assets/previews/CrayOnDemo.png" width="100%" alt="CrayOnDemo 미리보기" /><br/>
       <b>🧪 CrayOnDemo</b><br/>
       <sub>CrazyOn 프로젝트 파일럿.</sub><br/>
-      <sub>🔒 저장소 비공개 · 업무 파일럿</sub>
+      <sub>🔒 저장소 비공개</sub>
     </td>
-    <td width="33%"></td>
-    <td width="33%"></td>
   </tr>
 </table>
 
