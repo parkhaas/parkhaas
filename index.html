@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>박하스 · parkhaas</title>
+<style>
+  :root {
+    --bg:#f6f7f9; --surface:#ffffff; --text:#1b1f27; --muted:#5b6474; --line:#e3e6ec;
+    --accent:#2f6fed; --pub-bg:#e3f6ea; --pub:#12703a; --priv-bg:#eef0f4; --priv:#5b6474; --note-bg:#fdf0d9; --note:#8a5a00;
+    --shadow:0 1px 2px rgba(20,25,40,.06), 0 8px 24px rgba(20,25,40,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#0e1116; --surface:#161b23; --text:#e7eaf0; --muted:#98a2b3; --line:#262d39;
+      --accent:#79a8ff; --pub-bg:#12301f; --pub:#6ad69a; --priv-bg:#222935; --priv:#98a2b3; --note-bg:#3a2c10; --note:#f0c36a;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.6 -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", sans-serif;
+    -webkit-font-smoothing:antialiased; }
+  main { max-width:1120px; margin:0 auto; padding:56px 16px 80px; }
+  header { text-align:center; margin-bottom:48px; }
+  h1 { font-size:clamp(28px,5vw,40px); line-height:1.25; margin:0 0 12px; letter-spacing:-.02em; text-wrap:balance; }
+  header p { margin:0; color:var(--muted); }
+  header p b { color:var(--text); }
+  .chips { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; padding:0; margin:24px auto 0; max-width:560px; }
+  .chips li { font-size:13px; padding:4px 12px; border:1px solid var(--line); border-radius:999px; background:var(--surface); color:var(--muted); }
+  section { margin-top:48px; }
+  h2 { display:flex; align-items:center; gap:8px; font-size:22px; margin:0 0 16px; letter-spacing:-.01em; }
+  h2 small { font-size:13px; font-weight:500; color:var(--muted); background:var(--priv-bg); border-radius:999px; padding:0 8px; font-variant-numeric:tabular-nums; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:16px; }
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:var(--shadow);
+    display:flex; flex-direction:column; transition:transform .18s ease-out, border-color .18s ease-out; }
+  @media (hover:hover) { .card:hover { transform:translateY(-2px); border-color:color-mix(in srgb, var(--accent) 45%, var(--line)); } }
+  .thumb { display:block; aspect-ratio:31/20; background:var(--priv-bg); border-bottom:1px solid var(--line); }
+  .thumb img { display:block; width:100%; height:100%; object-fit:cover; }
+  .body { padding:16px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  h3 { margin:0; font-size:16px; line-height:1.4; display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 8px; }
+  h3 .emoji { font-size:18px; }
+  h3 .title { font-size:13px; font-weight:500; color:var(--muted); }
+  .body p { margin:0; font-size:14px; color:var(--muted); flex:1; }
+  .meta { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding-top:8px; }
+  .vis { font-size:12px; font-weight:600; padding:2px 10px; border-radius:999px; text-decoration:none; }
+  .vis.pub { background:var(--pub-bg); color:var(--pub); }
+  .vis.pub::after { content:" ↗"; }
+  .vis.priv { background:var(--priv-bg); color:var(--priv); }
+  .vis.note { background:var(--note-bg); color:var(--note); }
+  .lk { font-size:13px; color:var(--accent); text-decoration:none; }
+  .lk:hover, .vis.pub:hover { text-decoration:underline; }
+  a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:6px; }
+  .stats { display:flex; flex-wrap:wrap; justify-content:center; gap:16px; }
+  .stats img { max-width:100%; height:auto; }
+  footer { margin-top:56px; text-align:center; color:var(--muted); font-size:13px; }
+  footer a { color:var(--accent); }
+  @media (prefers-reduced-motion: reduce) { .card { transition:none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>안녕하세요, 박하스입니다 👋</h1>
+    <p><b>모바일 &amp; 풀스택 엔지니어</b> · Mobile &amp; Fullstack Engineer</p>
+    <p>Flutter / Android · Spring Boot · React</p>
+    <p>📍 서울, 대한민국 · Seoul, South Korea</p>
+    <ul class="chips"><li>Flutter</li><li>Kotlin</li><li>Android</li><li>Spring Boot</li><li>Java</li><li>React</li><li>TypeScript</li><li>JavaScript</li><li>Node.js</li><li>Python</li></ul>
+  </header>
+
+    <section>
+      <h2><span>🌐</span>웹 페이지<small>4</small></h2>
+      <div class="grid">
+      <article class="card">
+        <a class="thumb" href="https://parkhaas.github.io/fp-pilot/"><img src="assets/previews/fp-pilot.png" width="930" height="600" loading="lazy" alt="fp-pilot 미리보기"></a>
+        <div class="body">
+          <h3><span class="emoji">🎬</span>fp-pilot<span class="title">FLOVER-FLIX</span></h3>
+          <p>Fromis9 팬 영상 아카이브. YouTube 영상 목록 자동 수집.</p>
+          <div class="meta"><a class="vis pub" href="https://github.com/parkhaas/fp-pilot">저장소 공개</a><a class="lk" href="https://parkhaas.github.io/fp-pilot/">사이트 ↗</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="thumb" href="https://widget-eta-mocha.vercel.app/"><img src="assets/previews/mini_widgets.png" width="930" height="600" loading="lazy" alt="mini_widgets 미리보기"></a>
+        <div class="body">
+          <h3><span class="emoji">🧩</span>mini_widgets<span class="title">Mini Widgets</span></h3>
+          <p>노션에 임베드해 쓰는 정적 미니 위젯 모음 (HTML/JS, 빌드 없음, Vercel 배포).</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><a class="lk" href="https://widget-eta-mocha.vercel.app/">사이트 ↗</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/parkhaas.github.io.png" width="930" height="600" loading="lazy" alt="parkhaas.github.io 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">🌐</span>parkhaas.github.io<span class="title">프로필 페이지</span></h3>
+          <p>박하스 프로필 페이지.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/ocr-namecard.png" width="930" height="600" loading="lazy" alt="ocr-namecard 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">🪪</span>ocr-namecard<span class="title">명함 스캐너</span></h3>
+          <p>명함 OCR 앱.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span></div>
+        </div>
+      </article>
+      </div>
+    </section>
+    <section>
+      <h2><span>📱</span>모바일 앱<small>8</small></h2>
+      <div class="grid">
+      <article class="card">
+        <a class="thumb" href="https://raw.githubusercontent.com/parkhaas/dock/main/docs/BudgetBook.png"><img src="assets/previews/BudgetBook.png" width="930" height="600" loading="lazy" alt="BudgetBook 미리보기"></a>
+        <div class="body">
+          <h3><span class="emoji">💰</span>BudgetBook<span class="title">용돈기입장</span></h3>
+          <p>태풍이 용돈 기입장. 자녀 앱은 기록·용돈 요청, 부모 앱은 용돈(정기 포함) 송금.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><a class="lk" href="https://github.com/parkhaas/dock/releases/tag/BudgetBook">APK ↗</a><a class="lk" href="https://github.com/parkhaas/dock/releases/tag/BudgetBookClient">Client APK ↗</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="thumb" href="https://raw.githubusercontent.com/parkhaas/dock/main/docs/RecordNoti.png"><img src="assets/previews/RecordNoti.png" width="930" height="600" loading="lazy" alt="RecordNoti 미리보기"></a>
+        <div class="body">
+          <h3><span class="emoji">🔔</span>RecordNoti<span class="title">알림 기록기</span></h3>
+          <p>기기의 알림·상태를 기록하는 모니터 앱과 관리자 앱.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><a class="lk" href="https://github.com/parkhaas/dock/releases/tag/RecordNoti">APK ↗</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="thumb" href="https://raw.githubusercontent.com/parkhaas/dock/main/docs/familyguard.png"><img src="assets/previews/familyguard.png" width="930" height="600" loading="lazy" alt="familyguard 미리보기"></a>
+        <div class="body">
+          <h3><span class="emoji">👨‍👩‍👧</span>familyguard<span class="title">FamilyGuard</span></h3>
+          <p>자녀 기기 앱 사용 모니터링 앱.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><a class="lk" href="https://github.com/parkhaas/dock/releases/tag/familyguard">APK ↗</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="thumb" href="https://raw.githubusercontent.com/parkhaas/dock/main/docs/notion_cal.png"><img src="assets/previews/notion_cal.png" width="930" height="600" loading="lazy" alt="notion_cal 미리보기"></a>
+        <div class="body">
+          <h3><span class="emoji">🗓️</span>notion_cal<span class="title">Notion Today</span></h3>
+          <p>여러 Notion DB의 오늘 일정을 한 화면에 모아 보는 안드로이드 앱 (Kotlin/Compose).</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><a class="lk" href="https://github.com/parkhaas/dock/releases/tag/notion_cal">APK ↗</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="thumb" href="https://raw.githubusercontent.com/parkhaas/dock/main/docs/codeManager.png"><img src="assets/previews/codeManager.png" width="930" height="600" loading="lazy" alt="codeManager 미리보기"></a>
+        <div class="body">
+          <h3><span class="emoji">🎟️</span>codeManager</h3>
+          <p>바코드/QR을 열지 않고 읽고, 쿠폰을 보관·관리하는 Android 앱.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><a class="lk" href="https://github.com/parkhaas/dock/releases/tag/codeManager">APK ↗</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="thumb" href="https://raw.githubusercontent.com/parkhaas/dock/main/docs/photo-frame.png"><img src="assets/previews/photo-frame.png" width="930" height="600" loading="lazy" alt="photo-frame 미리보기"></a>
+        <div class="body">
+          <h3><span class="emoji">📷</span>photo-frame<span class="title">전자액자 (PhotoFrame)</span></h3>
+          <p>안드로이드 태블릿용 전자 액자 앱 (Kotlin/Compose).</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><a class="lk" href="https://github.com/parkhaas/dock/releases/tag/photo-frame">APK ↗</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/photo_frame.png" width="930" height="600" loading="lazy" alt="photo_frame 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">🖼️</span>photo_frame<span class="title">전자액자 (이전 버전)</span></h3>
+          <p>전자액자 이전 버전 (Flutter 프로젝트).</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/artemis.png" width="930" height="600" loading="lazy" alt="artemis 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">📐</span>artemis</h3>
+          <p>다양한 스크린 사이즈(폰, 태블릿, PC 등)에 자동 대응하는 레이아웃 구성 파일럿 (Flutter).</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><span class="vis note">업무 파일럿</span></div>
+        </div>
+      </article>
+      </div>
+    </section>
+    <section>
+      <h2><span>🛠️</span>기타 툴<small>7</small></h2>
+      <div class="grid">
+      <article class="card">
+        <a class="thumb" href="https://github.com/parkhaas/dock"><img src="assets/previews/dock.png" width="930" height="600" loading="lazy" alt="dock 미리보기"></a>
+        <div class="body">
+          <h3><span class="emoji">🚢</span>dock</h3>
+          <p>내 안드로이드 앱의 최신 APK를 올려 두는 공개 배포 저장소.</p>
+          <div class="meta"><a class="vis pub" href="https://github.com/parkhaas/dock">저장소 공개</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/telegram-bridge.png" width="930" height="600" loading="lazy" alt="telegram-bridge 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">🤖</span>telegram-bridge</h3>
+          <p>출퇴근 자동 브리핑과 Claude 대화를 중계하는 Telegram Bot.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/wiki-archive.png" width="930" height="600" loading="lazy" alt="wiki-archive 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">🗃️</span>wiki-archive</h3>
+          <p>웹 문서를 마크다운으로 연쇄 보관·갱신하고 링크가 살아 있는 HTML 사이트로 만드는 도구.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/id3tag.png" width="930" height="600" loading="lazy" alt="id3tag 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">🎵</span>id3tag</h3>
+          <p>MP3 ID3 태그 일괄 편집 CLI.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/ParkhaasLib.png" width="930" height="600" loading="lazy" alt="ParkhaasLib 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">📚</span>ParkhaasLib</h3>
+          <p>Android/Java 앱 구현간 공통코드 분리한 Library (본인 사용).</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/FrameSeeker.png" width="930" height="600" loading="lazy" alt="FrameSeeker 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">🎞️</span>FrameSeeker</h3>
+          <p>영상처리를 위한 Frame 단위 전처리기 파일럿.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><span class="vis note">업무 파일럿</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="assets/previews/CrayOnDemo.png" width="930" height="600" loading="lazy" alt="CrayOnDemo 미리보기"></div>
+        <div class="body">
+          <h3><span class="emoji">🧪</span>CrayOnDemo</h3>
+          <p>CrazyOn 프로젝트 파일럿.</p>
+          <div class="meta"><span class="vis priv">저장소 비공개</span><span class="vis note">업무 파일럿</span></div>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section>
+      <h2><span>📊</span>GitHub 통계</h2>
+      <div class="stats">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=parkhaas&show_icons=true&theme=github_dark&hide_border=true&count_private=true&locale=kr" />
+    <img height="165" src="https://github-stats-extended.vercel.app/api?username=parkhaas&show_icons=true&theme=default&hide_border=true&count_private=true&locale=kr" alt="GitHub 통계" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs?username=parkhaas&layout=compact&theme=github_dark&hide_border=true&count_private=true" />
+    <img height="165" src="https://github-stats-extended.vercel.app/api/top-langs?username=parkhaas&layout=compact&hide_border=true&count_private=true" alt="주 사용 언어" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=parkhaas&theme=github-dark-blue&hide_border=true&locale=ko" />
+    <img src="https://streak-stats.demolab.com/?user=parkhaas&hide_border=true&locale=ko" alt="연속 기여 통계" />
+  </picture>
+      </div>
+    </section>
+
+    <section>
+      <h2><span>🐍</span>컨트리뷰션 스네이크</h2>
+      <div class="stats">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/parkhaas/parkhaas/output/github-contribution-grid-snake-dark.svg" />
+    <img src="https://raw.githubusercontent.com/parkhaas/parkhaas/output/github-contribution-grid-snake.svg" alt="snake animation" />
+  </picture>
+      </div>
+    </section>
+
+  <footer>APK는 공개 배포 저장소 <a href="https://github.com/parkhaas/dock">dock</a>의 릴리스에서 받을 수 있습니다. 화면은 디자인 샘플입니다.</footer>
+</main>
+</body>
+</html>
